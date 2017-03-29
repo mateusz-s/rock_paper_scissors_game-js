@@ -6,9 +6,9 @@ var pickRock = document.getElementById('js-playerPick_rock'),
     pickPaper = document.getElementById('js-playerPick_paper'),
     pickScissors = document.getElementById('js-playerPick_scissors');
 
-pickRock.addEventListener('click', function () { playerPick('rock'); });
-pickPaper.addEventListener('click', function () { playerPick('paper'); });
-pickScissors.addEventListener('click', function () { playerPick('scissors'); });
+pickRock.addEventListener('click', function () { playerPick('kamień'); });
+pickPaper.addEventListener('click', function () { playerPick('papier'); });
+pickScissors.addEventListener('click', function () { playerPick('nożyce'); });
 
 // Wartości początkowe
 var gameState = 'notStarted', //'started', 'ended'
@@ -94,7 +94,7 @@ function playerPick(playerPick) {
 
 //Wybór komputera
 function getComputerPick() {
-    var possiblePicks = ['rock', 'paper', 'scissors'];
+    var possiblePicks = ['kamień', 'papier', 'nożyce'];
     return possiblePicks[Math.floor(Math.random() * 3)];
 }
 
