@@ -61,11 +61,10 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
 function newGame() {
     player.name = prompt('Graczu, wpisz swoje imię', 'imię gracza');
     
-    do {
-        numberOfWins = prompt('Do ilu gramy zwycięstw?', 3);
-    } while (isNaN(numberOfWins));
-    
     if (player.name) {
+        do {
+            numberOfWins = prompt('Do ilu gramy zwycięstw?', 3);
+        } while (isNaN(numberOfWins));
         player.score = computer.score = 0;
         gameState = 'started';
         setGameElements();
